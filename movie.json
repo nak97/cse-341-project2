@@ -1,0 +1,34 @@
+[{
+  "Movie": {
+    "name": "incredibles",
+    "genre": "anime",
+    "rating": "pg",
+    "year": "2004",
+    "boxOffice": "631.6 million",
+    "rottenTomatoesScore": "97%",
+    "streamingServices":"disney plus, amazon prime, youtube"
+
+  }
+},
+{
+  "movie2": {
+    "name": "",
+    "genre": "anime",
+    "rating": "pg",
+    "year": "2004",
+    "boxOffice": "631.6 million",
+    "rottenTomatoesScore": "97%",
+    "streamingServices":"disney plus, amazon prime, youtube"
+  }
+},
+{
+  "movie3": {
+    "name": "incredibles",
+    "genre": "anime",
+    "rating": "pg",
+    "year": "2004",
+    "boxOffice": "631.6 million",
+    "rottenTomatoesScore": "97%",
+    "streamingServices":"disney plus, amazon prime, youtube"
+  }
+}]
