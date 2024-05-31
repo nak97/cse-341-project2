@@ -3,15 +3,15 @@ const router = express.Router();
 
 const contactsController = require('../controllers/contacts');
 
-router.get('/', contactsController.getAll);
+router.get('/', moviesController.getAll);
 
-router.get('/:id', contactsController.getSingle);
+// router.get('/:id', contactsController.getSingle);
 
-router.post('/', contactsController.createMovie);
+// router.post('/', contactsController.createMovie);
 
-router.put('/:id', contactsController.updateMovie);
+// router.put('/:id', contactsController.updateMovie);
 
-router.delete('/:id', contactsController.deleteMovie);
+// router.delete('/:id', contactsController.deleteMovie);
 
 
 module.exports = router;
