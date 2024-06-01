@@ -7,11 +7,11 @@ router.get('/', moviesController.getAll);
 
 router.get('/:id', moviesController.getSingle);
 
-// router.post('/', contactsController.createMovie);
+router.post('/', moviesController.createMovie);
 
-// router.put('/:id', contactsController.updateMovie);
+// router.put('/:id', moviesController.updateMovie);
 
-// router.delete('/:id', contactsController.deleteMovie);
+// router.delete('/:id', moviesController.deleteMovie);
 
 
 module.exports = router;
