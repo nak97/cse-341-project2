@@ -1,4 +1,21 @@
 ### get all movies
 GET http://localhost:8080/api-docs
 
+
 ###
+GET http://localhost:8080/movies
+
+
+###POST request
+POST http://localhost:8080/movies HTTP/1.1
+content-Content-Type: application/json
+
+ {
+  "name": "cars",
+  "genre": "anime",
+  "rating": "pg",
+  "year": "2006",
+  "boxOffice": "800 million",
+  "rottenTomatoesScore": "99%",
+  "streamingServices":"disney plus, amazon prime, youtube"
+}
