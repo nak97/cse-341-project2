@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const contactsController = require('../controllers/contacts');
+const moviesController = require('../controllers/movie');
 
 router.get('/', moviesController.getAll);
 
-// router.get('/:id', contactsController.getSingle);
+router.get('/:id', moviesController.getSingle);
 
 // router.post('/', contactsController.createMovie);
 

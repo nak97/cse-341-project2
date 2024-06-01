@@ -38,7 +38,7 @@ const createMovie = async (req, res) => {
   }
   };
 
-  const updateContact = async (req, res) => {
+  const updateMovie = async (req, res) => {
     const userId = new ObjectId(req.params.id);
 
     const movie = {
@@ -63,7 +63,7 @@ const createMovie = async (req, res) => {
     }
     };
 
-    const deleteContact = async (req,res) => {
+    const deleteMovie = async (req,res) => {
       const userId = new ObjectId(req.params.id);
       const response = await mongodb.getDb().db('movies').collection('movies').deleteOne({_id: userId},true);
       console.log(response);
@@ -80,7 +80,7 @@ const createMovie = async (req, res) => {
 module.exports = { 
   getAll, 
   getSingle,
-createContact,
-updateContact,
-deleteContact
+createMovie,
+updateMovie,
+deleteMovie
  };
