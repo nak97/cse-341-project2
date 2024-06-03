@@ -5,6 +5,9 @@ GET http://localhost:8080/api-docs
 ###
 GET http://localhost:8080/movies
 
+### render get request
+https://cse-341-project2-5n6p.onrender.com/movies
+
 
 ###POST request
 POST http://localhost:8080/movies HTTP/1.1
@@ -19,3 +22,18 @@ content-Content-Type: application/json
   "rottenTomatoesScore": "99%",
   "streamingServices":"disney plus, amazon prime, youtube"
 }
+
+### render POST request
+POST https://cse-341-project2-5n6p.onrender.com/movies HTTP/1.1
+content-Content-Type: application/json
+
+ {
+  "name": "cars",
+  "genre": "anime",
+  "rating": "pg",
+  "year": "2006",
+  "boxOffice": "800 million",
+  "rottenTomatoesScore": "99%",
+  "streamingServices":"disney plus, amazon prime, youtube"
+}
+

@@ -38,41 +38,41 @@ const createMovie = async (req, res) => {
   }
   };
 
-  const updateMovie = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+  // const updateMovie = async (req, res) => {
+  //   const userId = new ObjectId(req.params.id);
 
-    const movie = {
-      name: req.body.name,
-      genre:req.body.genre,
-      rating: req.body.rating,
-      year:req.body.year,
-      boxOffice:req.body.boxOffice,
-      rottenTomatoesScore:req.body.rottenTomatoesScore,
-      streamingServices:req.body.streamingServices
-    };
-    const response = await mongodb
-    .getDb()
-    .db('movies')
-    .collection('movies')
-    .replaceOne({_id: userId }, movie);
-    console.log(response);
-    if (response.modifiedCount > 0){
-      res.status(204).send();
-    } else{
-      res.status(500).json(response.error || "some error occured while updating the movie. ");
-    }
-    };
+  //   const movie = {
+  //     name: req.body.name,
+  //     genre:req.body.genre,
+  //     rating: req.body.rating,
+  //     year:req.body.year,
+  //     boxOffice:req.body.boxOffice,
+  //     rottenTomatoesScore:req.body.rottenTomatoesScore,
+  //     streamingServices:req.body.streamingServices
+  //   };
+  //   const response = await mongodb
+  //   .getDb()
+  //   .db('movies')
+  //   .collection('movies')
+  //   .replaceOne({_id: userId }, movie);
+  //   console.log(response);
+  //   if (response.modifiedCount > 0){
+  //     res.status(204).send();
+  //   } else{
+  //     res.status(500).json(response.error || "some error occured while updating the movie. ");
+  //   }
+  //   };
 
-    const deleteMovie = async (req,res) => {
-      const userId = new ObjectId(req.params.id);
-      const response = await mongodb.getDb().db('movies').collection('movies').deleteOne({_id: userId},true);
-      console.log(response);
-      if (response.deletedCount > 0) {
-        res.status(204).send();
-      } else {
-        res.status(500).json(response.error || 'Some error ocurred while deleting movie. ');
-      }
-      }
+  //   const deleteMovie = async (req,res) => {
+  //     const userId = new ObjectId(req.params.id);
+  //     const response = await mongodb.getDb().db('movies').collection('movies').deleteOne({_id: userId},true);
+  //     console.log(response);
+  //     if (response.deletedCount > 0) {
+  //       res.status(204).send();
+  //     } else {
+  //       res.status(500).json(response.error || 'Some error ocurred while deleting movie. ');
+  //     }
+  //     }
     
 
 
@@ -80,7 +80,7 @@ const createMovie = async (req, res) => {
 module.exports = { 
   getAll, 
   getSingle,
-createMovie,
-updateMovie,
-deleteMovie
+createMovie
+// updateMovie,
+// deleteMovie
  };
